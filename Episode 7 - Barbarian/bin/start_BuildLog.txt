@@ -1,0 +1,81 @@
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: Barbarian_1.prg
+
+Memory Map
+----------
+Base-segment:
+  $0801-$ffc0 barb_pt1.prg
+
+Patch-segment:
+  $0520-$054d Unnamed
+  $0801-$080c Basic
+  $080e-$080d Basic End
+  $a800-$afff Unnamed
+
+Patch2-segment:
+  $451c-$453b Unnamed
+  $4544-$4563 Unnamed
+  $456c-$458b Unnamed
+  $4594-$45b3 Unnamed
+  $45bc-$45db Unnamed
+  $45e4-$4603 Unnamed
+  $460c-$462b Unnamed
+  $68e0-$69df Unnamed
+  $6a20-$6b1f Unnamed
+  $6b60-$6c5f Unnamed
+  $6ca0-$6d9f Unnamed
+  $6de0-$6edf Unnamed
+  $6f20-$701f Unnamed
+  $7060-$715f Unnamed
+  $71a0-$729f Unnamed
+  $72e0-$73df Unnamed
+  $7420-$751f Unnamed
+  $7560-$765f Unnamed
+  $76a0-$779f Unnamed
+  $77e0-$78df Unnamed
+  $7920-$7a1f Unnamed
+  $7a60-$7b5f Unnamed
+  $a91c-$a93b Unnamed
+  $a944-$a963 Unnamed
+  $a96c-$a98b Unnamed
+  $a994-$a9b3 Unnamed
+  $a9bc-$a9db Unnamed
+  $a9e4-$aa03 Unnamed
+  $aa0c-$aa2b Unnamed
+  $c775-$c775 Unnamed
+  $d000-$d0ff Unnamed
+  $d100-$d1ff Unnamed
+  $d200-$d2ff Unnamed
+  $d300-$d3ff Unnamed
+  $d400-$d4ff Unnamed
+  $d500-$d5ff Unnamed
+  $d600-$d6ff Unnamed
+  $d700-$d7ff Unnamed
+  $d800-$d8ff Unnamed
+  $d900-$d9ff Unnamed
+  $da00-$daff Unnamed
+  $db00-$dbff Unnamed
+  $dc00-$dcff Unnamed
+  $dd00-$ddff Unnamed
+  $de00-$deff Unnamed
+  $e11c-$e13b Unnamed
+  $e144-$e163 Unnamed
+  $e16c-$e18b Unnamed
+  $e194-$e1b3 Unnamed
+  $e1bc-$e1db Unnamed
+  $e1e4-$e203 Unnamed
+  $e20c-$e22b Unnamed
+  $e51c-$e53b Unnamed
+  $e544-$e563 Unnamed
+  $e56c-$e58b Unnamed
+  $e594-$e5b3 Unnamed
+  $e5bc-$e5db Unnamed
+  $e5e4-$e603 Unnamed
+  $e60c-$e62b Unnamed
+
+Writing Vice symbol file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 7 - Barbarian\bin\start.vs
+Writing Symbol file: start.sym

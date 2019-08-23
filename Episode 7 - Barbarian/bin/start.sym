@@ -1,0 +1,4 @@
+.label Entry=$520 {
+  .label B2=$538
+  .label B1=$531
+}
