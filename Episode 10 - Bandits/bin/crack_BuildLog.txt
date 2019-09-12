@@ -1,0 +1,24 @@
+parsing
+flex pass 1
+flex pass 2
+Output pass
+Writing prg file: crack.prg
+
+Memory Map
+----------
+Base-segment:
+  $0800-$d000 base.prg
+
+Patch-segment:
+  $0710-$0730 Unnamed
+  $0740-$07c0 Unnamed
+  $0800-$080b Unnamed
+  $0b5c-$0b61 Unnamed
+  $0f90-$0f91 Unnamed
+  $0f9e-$0f9f Unnamed
+  $5008-$508f Unnamed
+  $5808-$588f Unnamed
+  $9072-$9074 Unnamed
+
+Writing Vice symbol file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 10 - Bandits\bin\crack.vs
+Writing Symbol file: crack.sym
