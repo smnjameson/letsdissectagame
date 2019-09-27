@@ -1,0 +1,10 @@
+.label TGT=$d905
+.label Entry=$80e
+.label RestoreLevel=$7c96
+.label Timer=$7cb8
+.label SRC=$d902
+.label TICKS_PER_FRAME=$11
+.label CONTINUE_LENGTH=$a
+.label TIMER_HI=$7cb9
+.label ContinueText=$7cba
+.label TIMER_LO=$7cb8
