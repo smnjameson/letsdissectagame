@@ -128,13 +128,15 @@
 		txa
 		pha
 
-		lda $fe
+		lda TIMER_HI
 		beq !Exit+
 
+		lda #$00
+		sta TIMER_HI
 		clc
 		ldx #$07
 	!:
-		lda #$0
+		lda #$20
 		sta $5020,x
 		sta $5420,x
 		sta $5020 + $28,x

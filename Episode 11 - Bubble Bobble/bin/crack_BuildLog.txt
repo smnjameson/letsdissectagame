@@ -18,7 +18,7 @@ Patch-segment:
   $080e-$0815 Basic End
   $0a64-$0a69 Unnamed
   $0aa3-$0aa4 Unnamed
-  $7c40-$7cc1 Unnamed
+  $7c40-$7cc7 Unnamed
   $d537-$d53b Unnamed
   $d900-$d918 Unnamed
   $f11b-$f11e Unnamed

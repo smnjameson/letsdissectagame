@@ -1,11 +1,11 @@
 al C:d905 .TGT
 al C:80e .Entry
 al C:7c96 .RestoreLevel
-al C:7cb8 .Timer
+al C:7cbe .Timer
 al C:d902 .SRC
 al C:11 .TICKS_PER_FRAME
 al C:a .CONTINUE_LENGTH
 al C:80b .upstartEnd
-al C:7cb9 .TIMER_HI
-al C:7cba .ContinueText
-al C:7cb8 .TIMER_LO
+al C:7cbf .TIMER_HI
+al C:7cc0 .ContinueText
+al C:7cbe .TIMER_LO
