@@ -5,68 +5,80 @@
 .segmentdef Patch []
 
 .segment Base
-	* = $0900
-	.import binary "highmem.bin"
+
+	* = $0400
+		.import binary "highmem.bin"
+
 .segment Lowmem
-	* = $d000
-	.import binary "lowmem.bin"
+	 * = $5400
+		.import binary "lowmem.bin"
+
+	* = $f0ee
+		.import binary "introtext2.bin"
+
+//0831-0881
+//f177-f192
 
 .segment Patch
-	BasicUpstart2(Entry)
-
-	Entry: 
+* = $5780
 		sei
+		ldx #$7f
+		stx $dc0d
+		stx $dd0d
+
 		lda #$30
 		sta $01
-		jmp $d900
 
-* = $d900
-		ldx #$00
+
 	!:
 	SRC:
-		lda $d800, x
+		lda $5700, x
 	TGT:
-		sta $0800, x	
-		inx
-		inc $d020
+		sta $0300, x	
+		dex
+		cpx #$ff
 		bne !-
 		dec SRC + 2
 		dec TGT + 2
-		bne !-
-
+		bpl !-
 		jmp $4460
 
 
 
-* = $0a64
-		jsr $7c40 //3
+* = $0a0c
+		jsr BUGFIX //3  //0a0c
 		nop
-		beq $0a99
 		// lda $b2 //2
 		// ora $b3 //2
 		// beq $0a99 //2
 
-* = $0aa3
-		lda #17 //Final pause before returning to menu
+// * = $0a4b
+// 		lda #17 //Final pause before returning to menu
 
-* = $d537
+* = $1c8d
 		nop
 		nop
 		jsr RestoreLevel
 
 
-
-* = $7c40
-		.label TICKS_PER_FRAME = 17
+// * = $082e
+// 		jmp $0882
+* = $f14c		
+BUGFIX:
+		.label TICKS_PER_FRAME = 34
 		.label CONTINUE_LENGTH = 10
-		.label TIMER_LO = Timer//$f0
-		.label TIMER_HI = Timer + 1//$f1
+		.label TIMER_LO = $f0
+		.label TIMER_HI = $f1
+
 		lda $b2 
 		ora $b3
 		beq !DoContinue+
 		rts
 
 	!DoContinue:
+		lda $53e4
+		beq !GameOverForReal+
+
 		lda TIMER_HI
 		bne !Countdown+
 
@@ -74,24 +86,6 @@
 		sta TIMER_HI
 		lda #1
 		sta TIMER_LO
-
-		txa
-		pha
-
-		sec
-		ldx #$07
-	!:
-		lda ContinueText, x
-		sbc #$20
-		sta $5020,x
-		sta $5420,x
-		lda #$01
-		sta $d820,x
-		dex
-		bpl !-
-
-		pla
-		tax
 
 	!Countdown:
 		dec TIMER_LO
@@ -101,69 +95,47 @@
 		dec TIMER_HI
 		
 
-
-		
+		lda #$01
+		sta $d820 + $28 + 4
 		lda TIMER_HI
 		sta $5020 + $28 + 4
 		sta $5420 + $28 + 4
-		
-		lda #$01
-		sta $d820 + $28 + 4
 
-		lda TIMER_HI
 		beq !GameOverForReal+
 	!:
 		lda #$01
-		rts
-	
-
-	!GameOverForReal:
-		lda #$00
+	!GameOverForReal:	
 		rts
 
 
 
 
+// * = $f162
 	RestoreLevel:
-		txa
-		pha
 
 		lda TIMER_HI
 		beq !Exit+
 
-		lda #$00
+		lda #$0
+		sta $d820 + $28 + 4
 		sta TIMER_HI
-		clc
-		ldx #$07
-	!:
-		lda #$20
-		sta $5020,x
-		sta $5420,x
-		sta $5020 + $28,x
-		sta $5420 + $28,x
-		dex
-		bpl !-
-	
+
 
 	!Exit:
-		pla
-		tax
 		lda #$04
 		sta $045a, x
 		rts
-	Timer:
-		.byte $00,$00
-	ContinueText:
-		.byte $40,$50,$52,$4F,$43,$45,$45,$44
-* = $f11b 
-		.byte $40,$42,$59,$40
-* = $f120
-		.byte $0a, $12
-		.byte $40,$53,$48,$41,$4c,$4c,$41,$4e
 
 
 
-//INTERESTING LOCATIONS
-//Game over countdown routine $7bcb - $7bd3 
+
+
+
+
+
+
+
+
+
 	
 

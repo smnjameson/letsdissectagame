@@ -45,7 +45,6 @@ video_dx9: Failed to prepare for rendering!
 Sound: Available sound devices: dx wmm dummy fs dump wav voc iff aiff mp3 flac ogg soundmovie
 Keyboard: Loading keymap `C:\C64\Tools\Vice\C64\win_sym.vkm'.
 AUTOSTART: Autodetecting image type of `bin/crack.prg'.
-Filesystem Image Probe: Error - Import GCR: Unknown GCR image version 48.
 Filesystem Image: Unknown disk image `bin/crack.prg'.
 Tape: Error - Cannot open file `bin/crack.prg'
 Error - CRT header invalid.
@@ -55,11 +54,14 @@ AUTOSTART: Resetting the machine to autostart '*'
 AUTOSTART: `bin/crack.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
 Main CPU: RESET.
+Sound: Opened device `dx', speed 44100Hz, fragment size 2.9ms, buffer size 101ms
+reSID: MOS6581, filter on, sampling rate 44100Hz - resampling, pass to 19845Hz
 Drive 8: RESET.
-AUTOSTART: Injecting program data at $0801 (size $f7ff)
-AUTOSTART: Ready
-AUTOSTART: Starting program.
+AUTOSTART: Injecting program data at $0400 (size $fc00)
+AUTOSTART: Entered ROM at $e5d1
+AUTOSTART: Left ROM for $4478
 AUTOSTART: Done.
 Writing configuration file `C:\Users\Simon\AppData\Roaming\vice\3.1\vice.ini'.
 
 Exiting...
+Sound: Closing device `dx'

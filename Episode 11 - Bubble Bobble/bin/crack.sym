@@ -1,10 +1,8 @@
-.label TGT=$d905
-.label Entry=$80e
-.label RestoreLevel=$7c96
-.label Timer=$7cbe
-.label SRC=$d902
-.label TICKS_PER_FRAME=$11
+.label TGT=$5790
+.label RestoreLevel=$f180
+.label SRC=$578d
+.label TICKS_PER_FRAME=$22
 .label CONTINUE_LENGTH=$a
-.label TIMER_HI=$7cbf
-.label ContinueText=$7cc0
-.label TIMER_LO=$7cbe
+.label TIMER_HI=$f1
+.label TIMER_LO=$f0
+.label BUGFIX=$f14c

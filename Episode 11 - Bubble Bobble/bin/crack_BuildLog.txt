@@ -1,28 +1,23 @@
 parsing
 flex pass 1
 flex pass 2
-flex pass 3
 Output pass
 Writing prg file: crack.prg
 
 Memory Map
 ----------
 Base-segment:
-  $0900-$ffff Unnamed
+  $0400-$ffff Unnamed
 
 Lowmem-segment:
-  $d000-$d8ff Unnamed
+  $5400-$577f Unnamed
+  $f0ee-$f141 Unnamed
 
 Patch-segment:
-  $0801-$080c Basic
-  $080e-$0815 Basic End
-  $0a64-$0a69 Unnamed
-  $0aa3-$0aa4 Unnamed
-  $7c40-$7cc7 Unnamed
-  $d537-$d53b Unnamed
-  $d900-$d918 Unnamed
-  $f11b-$f11e Unnamed
-  $f120-$f129 Unnamed
+  $0a0c-$0a0f Unnamed
+  $1c8d-$1c91 Unnamed
+  $5780-$57a2 Unnamed
+  $f14c-$f190 Unnamed
 
 Writing Vice symbol file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 11 - Bubble Bobble\bin\crack.vs
 Writing Symbol file: crack.sym
