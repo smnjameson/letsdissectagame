@@ -1,0 +1,6 @@
+.label new=$e5e9
+.label TEMP=$e5be
+.label MOVCHK=$e5bf
+.label oldx=$e5eb
+.label old=$e5ea
+.label oldy=$e5ec

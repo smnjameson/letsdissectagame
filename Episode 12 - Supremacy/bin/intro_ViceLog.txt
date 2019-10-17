@@ -39,7 +39,7 @@ Loading system file `C:\C64\Tools\Vice\DRIVES\dos3040'.
 Loading system file `C:\C64\Tools\Vice\DRIVES\dos4040'.
 Loading system file `C:\C64\Tools\Vice\DRIVES\dos1001'.
 Drive: Finished loading ROM images.
-VIC-II: Initializing chip model "MOS6567R8" (65 cycles per line, 263 raster lines).
+VIC-II: Initializing chip model "MOS6569R3" (63 cycles per line, 312 raster lines).
 Palette: Loading palette `C:\C64\Tools\Vice\C64\pepto-pal.vpl'.
 video_dx9: Failed to prepare for rendering!
 Sound: Available sound devices: dx wmm dummy fs dump wav voc iff aiff mp3 flac ogg soundmovie
@@ -53,18 +53,6 @@ AUTOSTART: Error - `bin/intro.prg' is not a valid file.
 Main CPU: starting at ($FFFC).
 Main CPU: RESET.
 Drive 8: RESET.
-AUTOSTART: Autodetecting image type of `C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 12 - Supremacy\SUPRMACY.D64'.
-AUTOSTART: Attached file `C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 12 - Supremacy\SUPRMACY.D64' as a disk image.
-AUTOSTART: Resetting the machine to autostart '*'
-AUTOSTART: `C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 12 - Supremacy\SUPRMACY.D64' recognized as disk image.
-Main CPU: RESET.
-Drive 8: RESET.
-AUTOSTART: Loading program '*'
-AUTOSTART: Turning true drive emulation off.
-AUTOSTART: Turning true drive emulation on.
-AUTOSTART: Restoring true drive state of drive 8.
-AUTOSTART: Starting program.
-AUTOSTART: Done.
 Writing configuration file `C:\Users\Simon\AppData\Roaming\vice\3.1\vice.ini'.
 
 Exiting...

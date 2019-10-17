@@ -1,1 +1,1 @@
-exomizer sfx $582a %1 -o %1-packed.prg
+exomizer sfx $8200 %1 -o %1 -n

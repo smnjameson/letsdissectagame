@@ -1,15 +1,19 @@
 parsing
 flex pass 1
+flex pass 2
 Output pass
-Writing prg file: supremacy.prg
+Writing prg file: ypmloader.prg
 
 Memory Map
 ----------
 Base-segment:
-  $0801-$fff8 intro.prg
+  $0801-$ffff ypm.prg
 
 Patch-segment:
-  $583c-$583d Unnamed
+  $0801-$080d Basic
+  $080e-$080d Basic End
+  $97c5-$97c7 Unnamed
+  $e500-$e5ec Unnamed
 
 Writing Vice symbol file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 12 - Supremacy\bin\intro.vs
 Writing Symbol file: intro.sym
