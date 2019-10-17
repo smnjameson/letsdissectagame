@@ -1,0 +1,15 @@
+parsing
+flex pass 1
+Output pass
+Writing prg file: supremacy.prg
+
+Memory Map
+----------
+Base-segment:
+  $0801-$fff8 intro.prg
+
+Patch-segment:
+  $583c-$583d Unnamed
+
+Writing Vice symbol file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 12 - Supremacy\bin\intro.vs
+Writing Symbol file: intro.sym
