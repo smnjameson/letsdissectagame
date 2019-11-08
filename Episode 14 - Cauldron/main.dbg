@@ -1,0 +1,42 @@
+<C64debugger version="1.0">
+   <Sources values="INDEX,FILE">
+      0,KickAss.jar:/include/autoinclude.asm
+      1,C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 14 - Cauldron\main.asm
+   </Sources>
+
+   <Segment name="Default" dest="" values="START,END,FILE_IDX,LINE1,COL1,LINE2,COL2">
+   </Segment>
+
+   <Segment name="Base" dest="" values="START,END,FILE_IDX,LINE1,COL1,LINE2,COL2">
+      <Block name="Unnamed">
+         $0400,$fff9,1,8,2,8,8
+      </Block>
+   </Segment>
+
+   <Segment name="Patch" dest="" values="START,END,FILE_IDX,LINE1,COL1,LINE2,COL2">
+      <Block name="Unnamed">
+         $84a1,$84a1,1,13,3,13,5
+         $84a2,$84a2,1,14,3,14,5
+      </Block>
+      <Block name="Unnamed">
+         $870a,$870b,1,16,3,16,5
+         $870c,$870d,1,17,3,17,5
+         $870e,$870f,1,18,3,18,5
+         $8710,$8712,1,19,3,19,5
+         $8713,$8713,1,21,3,21,5
+      </Block>
+      <Block name="Unnamed">
+         $9973,$9983,1,24,3,24,7
+      </Block>
+   </Segment>
+
+   <Labels values="SEGMENT,ADDRESS,NAME">
+   </Labels>
+
+   <Breakpoints values="SEGMENT,ADDRESS,ARGUMENT">
+   </Breakpoints>
+
+   <Watchpoints values="SEGMENT,ADDRESS1,ADDRESS2,ARGUMENT">
+   </Watchpoints>
+
+</C64debugger>

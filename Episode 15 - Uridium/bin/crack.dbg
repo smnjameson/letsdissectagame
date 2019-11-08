@@ -1,0 +1,56 @@
+<C64debugger version="1.0">
+   <Sources values="INDEX,FILE">
+      0,KickAss.jar:/include/autoinclude.asm
+      1,C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 15 - Uridium\crack.asm
+   </Sources>
+
+   <Segment name="Default" dest="" values="START,END,FILE_IDX,LINE1,COL1,LINE2,COL2">
+   </Segment>
+
+   <Segment name="Base" dest="" values="START,END,FILE_IDX,LINE1,COL1,LINE2,COL2">
+      <Block name="Unnamed">
+         $0800,$fffe,1,7,2,7,8
+      </Block>
+   </Segment>
+
+   <Segment name="Patch" dest="" values="START,END,FILE_IDX,LINE1,COL1,LINE2,COL2">
+      <Block name="Unnamed">
+         $0700,$0701,1,21,4,21,6
+         $0702,$0703,1,22,4,22,6
+         $0704,$0705,1,23,4,23,6
+         $0706,$0708,1,24,4,24,6
+         $0709,$070b,1,25,4,25,6
+         $070c,$070d,1,26,4,26,6
+         $070e,$070f,1,27,4,27,6
+         $0710,$0711,1,28,4,28,6
+         $0712,$0713,1,29,4,29,6
+         $0714,$0714,1,31,4,31,6
+      </Block>
+      <Block name="Basic">
+         $0801,$0802,0,56,2,56,6
+         $0803,$0804,0,57,5,57,9
+         $0805,$0805,0,58,5,58,9
+         $0806,$0809,0,59,2,59,6
+         $080a,$080a,0,60,2,60,6
+         $080b,$080c,0,62,5,62,9
+      </Block>
+      <Block name="Unnamed">
+         $0cf9,$0cfb,1,16,4,16,6
+         $0cfc,$0cfc,1,17,4,17,6
+      </Block>
+      <Block name="Infinite Lives">
+         $0d7b,$0d7c,1,13,3,13,5
+      </Block>
+   </Segment>
+
+   <Labels values="SEGMENT,ADDRESS,NAME">
+      Patch,$080b,upstartEnd
+   </Labels>
+
+   <Breakpoints values="SEGMENT,ADDRESS,ARGUMENT">
+   </Breakpoints>
+
+   <Watchpoints values="SEGMENT,ADDRESS1,ADDRESS2,ARGUMENT">
+   </Watchpoints>
+
+</C64debugger>

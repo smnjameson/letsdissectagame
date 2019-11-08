@@ -1,0 +1,20 @@
+parsing
+flex pass 1
+flex pass 2
+Output pass
+Writing prg file: crack.prg
+
+Memory Map
+----------
+Base-segment:
+  $0800-$fffe Unnamed
+
+Patch-segment:
+  $0700-$0714 Unnamed
+  $0801-$080c Basic
+  $080e-$080d Basic End
+  $0cf9-$0cfc Unnamed
+  $0d7b-$0d7c Infinite Lives
+
+Writing Vice symbol file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 15 - Uridium\bin\crack.vs
+Writing Symbol file: crack.sym
