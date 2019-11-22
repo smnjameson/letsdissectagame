@@ -1,0 +1,23 @@
+NOTE: a few char colors change between levels
+
+
+Level 1
+=======
+MC1 = Light Grey (15)
+MC2 = Brown
+
+Level 2
+=======
+MC1 = Light Blue (14)
+MC2 = Light Grey (15)
+
+Level 3
+=======
+MC1 = Medium Grey (12)
+MC2 = Dark Grey (11)
+
+Level 4
+=======
+MC1 = Light Blue (14)
+MC2 = Blue (6)
+
