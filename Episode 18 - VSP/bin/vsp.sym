@@ -1,0 +1,27 @@
+.label selfmod_branch=$1921
+.label COLORS=$6800
+.label copyInitialScreen=$884 {
+}
+.label offset=$3
+.label ShiftColorRam=$da3 {
+}
+.label UpdateScroll=$9cf {
+}
+.label maxspeed=$20 {
+}
+.label IRQ=$18a2
+.label FullCopy=$d88 {
+}
+.label shiftColorNow=$7
+.label speed=$5
+.label ShiftIRQ=$1954
+.label UpdateMap=$9da {
+}
+.label timer=$8
+.label IRQLine=$2f
+.label Entry=$80e
+.label mappos=$2
+.label xscroll=$4
+.label buffer=$6
+.label StableIRQ=$1900
+.label MAP=$5000

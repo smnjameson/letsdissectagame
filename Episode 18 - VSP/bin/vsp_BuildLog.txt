@@ -1,0 +1,20 @@
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 18 - VSP\bin\vsp.prg
+
+Memory Map
+----------
+Default-segment:
+  *$0002-$0008 Unnamed
+  $0801-$080c Basic
+  $080e-$19c6 Basic End
+  $4800-$4fff Unnamed
+  $5000-$67ff Unnamed
+  $6800-$68ff Unnamed
+  $6c00-$6fff Unnamed
+
+Writing Vice symbol file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 18 - VSP\bin\vsp.vs
+Writing Symbol file: vsp.sym
