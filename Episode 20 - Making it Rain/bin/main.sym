@@ -1,0 +1,39 @@
+.label CopyEffect=$bc1 {
+}
+.label ObjectLength=$a50
+.label FlakeRotateX=$a80
+.label ObjectY0Speed=$a38
+.label FlakeRotateY=$a88
+.label InvPowersOfTwo=$db0
+.label ObjectX1=$a14
+.label ObjectX0=$a08
+.label SnowSize=$a74
+.label SplashFrequency=$40
+.label OBJECT_COUNT=$c
+.label STRIP_LENGTH=$9
+.label Entry=$80e {
+  .label Counter=$a07
+  .label SMOD=$90b
+}
+.label Temp=$ab0
+.label DrawSnowObjects=$ab3 {
+}
+.label Sinus=$a90
+.label SnowX1=$a5c
+.label UpdateObject=$b9e {
+}
+.label DrawRainObjects=$b5b {
+}
+.label PowersOfTwo=$da8
+.label ObjectY1=$a2c
+.label ObjectY0=$a20
+.label TempY=$ab2
+.label SplashFrames=$bb8
+.label TempX=$ab1
+.label UpdateSnowObjects=$b22 {
+}
+.label ObjectY1Speed=$a44
+.label SnowXSpeed=$a68
+.label FillScreen=$de0 {
+  .label SMOD=$de7
+}
