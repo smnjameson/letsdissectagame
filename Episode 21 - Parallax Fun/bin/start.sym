@@ -1,0 +1,38 @@
+.label JumpTable=$900
+.label ScrollLayer1=$953 {
+}
+.label ScrollLayer3=$1675 {
+}
+.label SetupIrq=$2397 {
+}
+.label ScrollLayer2=$10d4 {
+}
+.label IRQ2=$23dc {
+}
+.label IRQ3=$2409 {
+}
+.label IRQ1=$23b7 {
+}
+.label ScrollToggle=$908
+.label IRQ6=$2490 {
+}
+.label LayerScrollSpeeds=$87f
+.label IRQ7=$24bd {
+}
+.label IRQ4=$2436 {
+}
+.label IRQ5=$2463 {
+}
+.label Entry=$80e {
+}
+.label IRQ8=$24ea {
+}
+.label SCREEN=$4000 {
+}
+.label LayerScrollValues=$87b
+.label UpdateScrolls=$909 {
+  .label JumpRoutine=$94b
+  .label JumpSelfMod=$950
+}
+.label ScrollLayer4=$1a36 {
+}
