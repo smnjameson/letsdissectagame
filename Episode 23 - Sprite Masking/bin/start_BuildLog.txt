@@ -1,0 +1,18 @@
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 23 - Sprite Masking\bin\start.prg
+
+Memory Map
+----------
+Default-segment:
+  $0801-$080c Basic
+  $080e-$09c2 Basic End
+  $2000-$27ff Unnamed
+  $2800-$2be7 Unnamed
+  $3000-$30ff Unnamed
+
+Writing Vice symbol file: C:\Users\Simon\Desktop\Lets Dissect a C64 game\Episode 23 - Sprite Masking\bin\start.vs
+Writing Symbol file: start.sym
