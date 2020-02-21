@@ -206,7 +206,7 @@
 
 #if D64
 #else 
-	* = $0000 "CARTRIDGE Header"
+	* = $0000 "CARTRIDGE Code"
 
 	.var pspc = $8000
 	.pseudopc pspc {

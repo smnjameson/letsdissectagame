@@ -1,0 +1,51 @@
+.label PIC10=$20b8f
+.label __PIC6=$171cf
+.label __PIC7=$1a50f
+.label __PIC8=$1d84f
+.label __PIC9=$20b8f
+.label __PIC2=$a4cf
+.label __PIC3=$d80f
+.label __PIC4=$10b4f
+.label TimerToggle=$901
+.label __PIC5=$13e8f
+.label __PIC0=$3e4f
+.label __PIC1=$718f
+.label Setup=$90d
+.label FAT_TABLE=$8100
+.label PIC1=$3e4f
+.label PIC0=$b0f
+.label __BOOT=$b0f
+.label PIC7=$171cf
+.label PIC6=$13e8f
+.label PIC9=$1d84f
+.label PIC8=$1a50f
+.label PIC3=$a4cf
+.label PIC2=$718f
+.label PIC5=$10b4f
+.label PIC4=$d80f
+.label __PIC10=$23ecf
+.label CART=$8000 {
+  .label CrtStart=$8009
+  .label KILLKEY=$1
+  .label NoKill=$8033
+}
+.label colorRam=$1c00
+.label COPY_ROUTINES=$900 {
+  .label BlankIRQ=$464
+  .label CartEntry=$468
+  .label start=$400
+  .label FAT_DATA=$ea
+  .label StartCartLoad=$4ac {
+  }
+  .label end=$4b6
+  .label CartLoad=$497 {
+  }
+}
+.label setupCopyBanks=$9b6
+.label Entry=$903 {
+}
+.label PicNumber=$902
+.label BOOT=$9e1
+.label Timer=$900
+.label MAX_PICS=$b
+.label Display=$91c
