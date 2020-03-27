@@ -1,0 +1,72 @@
+.label __ASSETS=$19b5
+.label COPY_ROUTINES=$900 {
+  .label BlankIRQ=$cf64
+  .label CartEntry=$cf68
+  .label start=$cf00
+  .label FAT_DATA=$ea
+  .label StartCartLoad=$cfac {
+  }
+  .label end=$cfb6
+  .label CartLoad=$cf97 {
+  }
+}
+.label __GAME001=$4b71
+.label setupCopyBanks=$9b6
+.label __MUSIC=$ef5
+.label GAME001=$19b5
+.label FAT_TABLE=$8100
+.label ASSETS=$ef5 {
+}
+.label MUSIC=$d4a {
+}
+.label GAME002=$4b71
+.label GAME003=$7d2d
+.label __BOOT=$d4a
+.label BOOT=$9e1
+.label __GAME003=$bcab
+.label __GAME002=$7d2d
+.label MENU=$c000 {
+  .label ArrowPosX=$c0f2
+  .label ArrowPosY=$c0fd
+  .label IRQ2=$c296 {
+  }
+  .label IRQ3=$c2b5 {
+  }
+  .label IRQ1=$c26f {
+  }
+  .label AnimateBlood=$c231 {
+  }
+  .label ArrowRight=$c0f0
+  .label LoadGame=$c2d5 {
+  }
+  .label DrawArrow=$c1d7 {
+    .label ModScreen=$c227
+  }
+  .label Entry=$c000 {
+  }
+  .label ARROW=$fb
+  .label ArrowLeft=$c0ee
+  .label MAX_POSITION=$a
+  .label ColorRampIndex=$c151
+  .label Debounce=$c152
+  .label TempBasic=$c2d4
+  .label DebounceTimer=$c153
+  .label ScreenLSB=$c113
+  .label FrameTimer=$c26e
+  .label DoColorRamp=$c09d {
+  }
+  .label FrameUpdate=$c26d
+  .label UpdateArrow=$c154 {
+  }
+  .label JOY=$fd
+  .label ArrowBlank=$c0ec
+  .label ScreenMSB=$c12c
+  .label ColorRamp=$c145
+  .label ArrowSwitch=$c108
+  .label ArrowPosition=$c0eb
+}
+.label CART=$8000 {
+  .label CrtStart=$8009
+  .label KILLKEY=$1
+  .label NoKill=$8033
+}
