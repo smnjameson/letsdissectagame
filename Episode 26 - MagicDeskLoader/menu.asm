@@ -5,6 +5,7 @@ MENU:{
 	Entry:{
 			LOADER_LoadFile("ASSETS")
 			LOADER_LoadFile("MUSIC")
+			LOADER_LoadFile("BOOTSTRAP")
 
 			lda $dd00
 			and #%11111100
@@ -49,6 +50,31 @@ MENU:{
 			jsr $10ce
 			cli
 
+			//Initialise game list
+			ldy #$00
+			ldx #$00
+		!Loop:
+			lda GameList, y
+		Mod1:
+			sta $8400 + 6 * $28 + 22, x
+			inx
+			cpx #$10
+			bne !+
+			clc
+			lda Mod1 + 1
+			adc #$50
+			sta Mod1 + 1
+			lda Mod1 + 2
+			adc #$00
+			sta Mod1 + 2
+			ldx #$00
+		!:
+			iny
+			cpy #[8*16]
+			bne !Loop-
+
+
+
 		!Loop:
 			lda FrameUpdate
 			beq !Loop-
@@ -84,13 +110,13 @@ MENU:{
 			stx ColorRampIndex
 
 			
-			ldy #$0b
+			ldy #$0f
 		!Loop:
 			lda ColorRamp, x
-			sta $d800 + 6 * $28 + 23, y
-			sta $d800 + 10 * $28 + 23, y
-			sta $d800 + 14 * $28 + 23, y
-			sta $d800 + 18 * $28 + 23, y
+			sta $d800 + 6 * $28 + 22, y
+			sta $d800 + 10 * $28 + 22, y
+			sta $d800 + 14 * $28 + 22, y
+			sta $d800 + 18 * $28 + 22, y
 			inx
 			cpx #$0c
 			bne !+
@@ -104,24 +130,24 @@ MENU:{
 			ldy #$00
 		!Loop:
 			lda ColorRamp, x
-			sta $d800 + 8 * $28 + 23, y
-			sta $d800 + 12 * $28 + 23, y
-			sta $d800 + 16 * $28 + 23, y
-			sta $d800 + 20 * $28 + 23, y
+			sta $d800 + 8 * $28 + 22, y
+			sta $d800 + 12 * $28 + 22, y
+			sta $d800 + 16 * $28 + 22, y
+			sta $d800 + 20 * $28 + 22, y
 			inx
 			cpx #$0c
 			bne !+
 			ldx #$00
 		!:
 			iny
-			cpy #$0c
+			cpy #$10
 			bne !Loop-
 
 			rts
 	}
 
 
-	.print "Arrow Pos " + toHexString(*)
+	
 	.label MAX_POSITION = 10
 
 	ArrowPosition:
@@ -133,7 +159,7 @@ MENU:{
 	ArrowRight:
 			.byte $3e,$3f
 	ArrowPosX:
-			.byte $11,$11,$11,$14,$14,$14,$14,$14,$14,$14,$14
+			.byte $11,$11,$11,$13,$13,$13,$13,$13,$13,$13,$13
 	ArrowPosY:
 			.byte $02,$0b,$14,$06,$08,$0a,$0c,$0e,$10,$12,$14
 	ArrowSwitch:
@@ -225,9 +251,8 @@ MENU:{
 			and #$10
 			bne !NotFr+
 			lda ArrowPosition
-			clc
-			adc #$03
-			jmp LoadGame
+
+			jmp BOOTSTRAP.LoadGame
 		!NotFr:
 
 
@@ -407,95 +432,5 @@ MENU:{
 	}
 
 
-	TempBasic:
-		.byte $00
-	LoadGame: {
-				pha
 
-				//Disable screen
-				lda #$7f
-				sta $d011
-				//Stop sounds
-				lda #$08
-				sta $d404
-				sta $d40b
-				sta $d412
-				lda #$00
-				sta $d418
-
-				//LOAD BANK
-				pla
-				asl
-				asl
-				asl
-				tax
-				sei
-				lda #$00	
-				ldy #>FAT_TABLE
-				jsr COPY_ROUTINES.StartCartLoad
-
-		
-
-		  		sei
-		  		lda #$00	//Disable RASTER IRQs
-				sta $d019
-				sta $d01a
-
-		  		lda #$37
-		  		sta $01
-
-		  		ldx #$ff
-		  		txs 
-		  		lda #$2f
-		  		sta $00
-		 		
-		 		lda #$7f
-		 		sta $dc0d
-		 		sta $dd0d
-
-		 		lda #$00	//Disable RASTER IRQs
-				sta $d01a
-				
-				asl $d019
-
-				lda #$ff  //Turn off cart
-				sta $de00				 		
-
-				ldx #$ff
-				sei
-				txs
-				cld 
-				jsr $fd02
-				
-				ldx $0801
-				stx TempBasic
-				stx $d016
-				jsr $FDA3
-				jsr $FD50
-				jsr $FD15
-				jsr $FF5B
-				cli
-
-				jsr $E453
-				jsr $E3BF
-				ldx #$fb
-				txs 
-
-				lda #$00
-				sta $d020
-				sta $d021
-				lda #$1b
-				sta $d011
-
-				ldx TempBasic
-				stx $0801
-
-
-		        lda #$00         // basic start
-		        jsr $A871       // clr
-		        jsr $A533       // re-link
-		        jsr $A68E       // set current character pointer to start of basic - 1
-		        jmp $A7AE       // run
-
-	}
 }
