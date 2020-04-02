@@ -304,6 +304,8 @@
 
 
 				ldy #$00
+				
+				jmp !Skip+
 			!Loop:
 				ldx #$37	//Bank in cart
 				stx $01
