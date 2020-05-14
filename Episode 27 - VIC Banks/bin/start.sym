@@ -1,0 +1,7 @@
+.label Loop=$8fd
+.label Entry=$80e
+.label SCREEN_RAM=$7c00
+.label IRQ=$900 {
+}
+.label sinusindex=$92d
+.label sinustable=$92e
