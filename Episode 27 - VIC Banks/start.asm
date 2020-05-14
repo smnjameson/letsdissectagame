@@ -38,21 +38,6 @@ Entry:
 
 		lda #$35
 		sta $01
-
-		lda #<IRQ
-		sta $fffe
-		lda #>IRQ
-		sta $ffff
-		lda #$30
-		sta $d012 
-		lda $d011
-		and #$7f
-		sta $d011
-
-		lda #$01
-		sta $d01a
-
-		asl $d019
 		cli
 
 
@@ -89,6 +74,8 @@ Entry:
 		lda #$ff
 		sta SCREEN_RAM + $000, x
 		sta SCREEN_RAM + $100, x
+		sta SHADOW_SCREEN_RAM + $000, x
+		sta SHADOW_SCREEN_RAM + $100, x
 		sta SCREEN_RAM + $200, x
 		sta SCREEN_RAM + $300, x
 		lda #$09
@@ -106,12 +93,32 @@ Entry:
 				lda #[32 * i]
 				ldx #$00
 			!:
-				sta SCREEN_RAM + i * $28 + $04, x
+				sta SCREEN_RAM + i * $28 + $06, x
+				sta SHADOW_SCREEN_RAM + i * $28 + $06, x
 				adc #$01
 				inx
 				cpx #$20
 				bne !-
 		}
+
+
+
+		sei
+		lda #<IRQ
+		sta $fffe
+		lda #>IRQ
+		sta $ffff
+		lda #$2e
+		sta $d012 
+		lda $d011
+		and #$7f
+		sta $d011
+
+		lda #$01
+		sta $d01a
+
+		asl $d019
+		cli
 
 
 	Loop:
@@ -120,7 +127,7 @@ Entry:
 
 
 
-
+.label ZP_TEMP = $02
 IRQ: {	
 		pha  
 		txa 
@@ -130,23 +137,38 @@ IRQ: {
 
 				inc sinusindex
 				ldx sinusindex
-				ldy #$48
+				ldy #$24
+				sty ZP_TEMP	
+
 			!:
 				lda $d012
 				cmp $d012
 				beq *-3
 
-				lda $d016
-				and #$f8
-				ora sinustable,x
-				sta $d016
+				lda $d012
+				cmp $d012
+				beq *-3
+
+
+
+				sty $d018
+
+
+				lda sinusd016,x
+				sta $d016	
+
+				lda staticdd00,x
+				sta $dd00	
 
 				inx
-				dey
+				ldy sinusd018,x
+				dec ZP_TEMP
 				bne !-
 
 		asl $d019
 
+			lda #%10
+			sta $dd00
 		pla 
 		tay 
 		pla 
@@ -156,18 +178,41 @@ IRQ: {
 
 }
 
+
+.const SHIMMER_FACTOR = 128
 sinusindex:
 		.byte $00
 sinustable:
-		.fill 256, sin(i/32 * PI * 2) * 3.5 + 3.5  //0 to 7
+		.fill 256, sin(i/SHIMMER_FACTOR * PI * 2) * 3.5 + 3.5  //0 to 7
+.align $100
+*=*""
+sinusd016:
+		.fill 256, [$d8 + ((sin(i/SHIMMER_FACTOR * PI * 2) * 27.5 + 27.5) & $07)] //0 to 31
+sinusd018:
+		.fill 256, [$f0 + (((sin(i/SHIMMER_FACTOR * PI * 2) * 27.5 + 27.5) & $F8) >> 2)] //0 to 31
+
+staticdd00:
+		.for(var i=0; i<8; i++) {
+			.fill 30, %10
+			.fill 02, %00  
+		}
 
 
 
 * = $4000
 	.import binary "chars0.bin"
+	.import binary "chars1.bin"
+	.import binary "chars2.bin"
+	.import binary "chars3.bin"
+	.import binary "chars4.bin"
+	.import binary "chars5.bin"
+	.import binary "chars6.bin"
 
 .label SCREEN_RAM = $7c00
+.label SHADOW_SCREEN_RAM = $fc00
 
 
+* = $8000
+	.fill $7c00, random()  * 256
 
 

@@ -51,13 +51,13 @@ Error - CRT header invalid.
 CART: 'bin/start.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `bin/start.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 123467. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 35. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `bin/start.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
 Main CPU: RESET.
 Drive 8: RESET.
-AUTOSTART: Injecting program data at $0801 (size $3fff)
+AUTOSTART: Injecting program data at $0801 (size $f3ff)
 AUTOSTART: Ready
 AUTOSTART: Turning Warp mode off
 AUTOSTART: Starting program.
@@ -65,4 +65,4 @@ AUTOSTART: Done.
 Writing configuration file `C:\Users\Simon\AppData\Roaming\vice\vice.ini'.
 
 Exiting...
-VIC-II: VSP Bug: safe channels are: 345. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 123567. Emulation of memory corruption is disabled.

@@ -1,7 +1,11 @@
-.label Loop=$8fd
+.label Loop=$91d
 .label Entry=$80e
 .label SCREEN_RAM=$7c00
-.label IRQ=$900 {
+.label sinusd016=$b00
+.label SHADOW_SCREEN_RAM=$fc00
+.label IRQ=$920 {
 }
-.label sinusindex=$92d
-.label sinustable=$92e
+.label sinusd018=$c00
+.label ZP_TEMP=$2
+.label sinusindex=$964
+.label sinustable=$965
