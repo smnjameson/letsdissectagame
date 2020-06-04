@@ -1,0 +1,12 @@
+al C:810 .KeyDownPrevTable
+al C:86a .KeyScan
+al C:8d1 .Entry
+al C:983 .Timer
+al C:818 .KeyDownTable
+al C:89c .GetKeyPressed
+al C:80b .upstartEnd
+al C:8d0 .Index
+al C:820 .KeyPressedTable
+al C:828 .KeyLookup
+al C:868 .KeyColumn
+al C:869 .KeyTemp

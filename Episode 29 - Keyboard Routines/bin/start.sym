@@ -1,0 +1,13 @@
+.label KeyDownPrevTable=$810
+.label KeyScan=$86a {
+}
+.label Entry=$8d1
+.label Timer=$983
+.label KeyDownTable=$818
+.label GetKeyPressed=$89c {
+}
+.label Index=$8d0
+.label KeyPressedTable=$820
+.label KeyLookup=$828
+.label KeyColumn=$868
+.label KeyTemp=$869
