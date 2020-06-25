@@ -1,0 +1,35 @@
+.label SoftSprite_X=$8ec
+.label FONT_COPY_SRC=$7
+.label ColorScreen=$864 {
+}
+.label ClearBullets=$a47 {
+}
+.label Entry=$80e
+.label Sinus=$892
+.label Screen_Row_MSB=$a0f
+.label DrawBullets=$a28 {
+}
+.label TEMP2=$3
+.label Screen_Row_LSB=$9f6
+.label SCREEN_LOOKUP=$4
+.label SOFT_SPRITE_LOOKUPS=$b
+.label SoftSprite_Char=$8fc
+.label TIMER=$6
+.label SoftSprite_OriginalChar=$90c
+.label AddBullet=$92c {
+}
+.label UpdateBullets=$a5d {
+}
+.label SOFT_SPRITE_FONTSTART=$80
+.label FONT_COPY_DEST=$9
+.label NextSoftSprite=$8eb
+.label GrabCharCopy=$96c {
+}
+.label MAX_SOFT_SPRITES=$10
+.label TEMP=$2
+.label Colors=$2be8
+.label SCREEN_RAM=$2800
+.label SOFT_SPRITE_FONTADDR=$2400
+.label SoftSprite_Delta=$91c
+.label Shoot=$8d2 {
+}
