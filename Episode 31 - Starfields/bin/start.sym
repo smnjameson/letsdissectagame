@@ -1,0 +1,20 @@
+.label Speed=$8fd
+.label StarX=$8fe
+.label Restorey=$8da
+.label BITMAP_LOOKUP=$10
+.label StarAngle=$93e
+.label TIMER=$6
+.label NUMBER_OF_SPEEDS=$3
+.label RotateDir=$8fc
+.label StarTables=$4000
+.label Entry=$80e
+.label JOY=$4
+.label MAX_SPEED=$8 {
+}
+.label SCREEN_RAM=$400
+.label StarBitmask=$9be
+.label STAR_LOOKUP=$2
+.label BITMAP_RAM=$2000
+.label SPAWN_OFFSET=$24
+.label StarDelay=$97e
+.label MAX_STARS=$40
