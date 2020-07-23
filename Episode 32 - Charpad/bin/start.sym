@@ -1,0 +1,24 @@
+.label ClearScreen=$927 {
+}
+.label MultiplyNum1=$2
+.label MultiplyNum2=$3
+.label Entry=$8eb
+.label MAPLOADER=$80e {
+  .label TileToScreenOffsets=$80e
+  .label DrawMap=$812 {
+    .label ScreenMod=$861
+    .label ColorMod=$86b
+  }
+  .label Multiply=$8d0 {
+    .label doAdd=$8d7
+    .label enterLoop=$8e4
+    .label loop=$8e0
+  }
+}
+.label MapLoaderColumn=$9
+.label SCREEN_RAM=$400 {
+}
+.label MultiplyNum1Hi=$4
+.label MapLoaderTileLookup=$5
+.label MapLoaderRow=$a
+.label MapLoaderMapLookup=$7
