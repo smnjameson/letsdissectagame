@@ -1,0 +1,21 @@
+.label Loop=$842
+.label FetchOffsetMod=$8a9
+.label ParticleZPCount=$5
+.label ClearParticles=$8bf
+.label ParticleCount=$4
+.label Particles=$4000 {
+  .label FineY=$40f0
+  .label FineX=$40a0
+  .label Char=$4140
+  .label LSB=$4000
+  .label MSB=$4050
+}
+.label DrawParticles=$861
+.label Entry=$80e
+.label InitParticles=$858
+.label POT=$b00
+.label NextParticleChar=$3
+.label UpdateParticles=$a50 {
+}
+.label ParticleFetch=$2
+.label ScreenFetch=$6
